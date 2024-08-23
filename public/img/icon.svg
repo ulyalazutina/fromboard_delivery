@@ -95,13 +95,13 @@
 
     <symbol id="burger" viewBox="0 0 24 16">
         <g clip-path="url(#clip0_1122_2356)">
-        <rect width="24" height="4" rx="2" fill="#A78BFA"/>
-        <rect y="6" width="24" height="4" rx="2" fill="#A78BFA"/>
-        <rect y="12" width="24" height="4" rx="2" fill="#A78BFA"/>
+        <rect width="24" height="4" rx="2" />
+        <rect y="6" width="24" height="4" rx="2" />
+        <rect y="12" width="24" height="4" rx="2" />
         </g>
         <defs>
         <clipPath id="clip0_1122_2356">
-        <rect width="24" height="16" fill="white"/>
+        <rect width="24" height="16" />
         </clipPath>
         </defs>
     </symbol>

@@ -1,0 +1,34 @@
+@mixin font($size, $height, $weight, $color: $colorTextMain) {
+    font-size: $size;
+    color: $color;
+    line-height: $height;
+    font-weight: $weight;
+}
+
+@mixin btn {
+    border-radius: 4px;
+    background: $colorMain;
+    border: none;
+    outline: none;
+    padding: 10px 28px;
+    text-align: center;
+    @include font(16px, 24px, 700, $colorBtn);
+    transition: all .2s;
+    &:hover {
+        background: #A78BFA;
+    }
+    &:active {
+        background: #6D28D9;
+    }
+    &:disabled {
+        background: #DDD6FE;
+    }
+    @content;
+}
+
+@mixin linkHover {
+    transition: color .2s;
+    &:hover {
+        color: $colorMain;
+    }
+}
