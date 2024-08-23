@@ -1,0 +1,244 @@
+.header__container, .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.center {
+  padding-right: calc(50% - 768px);
+  padding-left: calc(50% - 768px);
+}
+
+.header {
+  display: grid;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header__inner {
+  display: flex;
+}
+.header__wrap {
+  border-right: 1px solid #8B5CF6;
+  padding-right: 12px;
+  text-align: right;
+}
+.header__text {
+  font-size: 16px;
+  color: #111827;
+  line-height: 24px;
+  font-weight: 400;
+}
+.header__box {
+  padding-left: 12px;
+  text-align: right;
+}
+.header__phone {
+  font-size: 36px;
+  color: #111827;
+  line-height: 40px;
+  font-weight: 900;
+}
+.header__phone-text {
+  font-size: 24px;
+  color: #111827;
+  line-height: 32px;
+  font-weight: 300;
+}
+.header__btn {
+  border-radius: 4px;
+  background: #8B5CF6;
+  border: none;
+  outline: none;
+  padding: 10px 28px;
+  text-align: center;
+  font-size: 16px;
+  color: #F9FAFB;
+  line-height: 24px;
+  font-weight: 700;
+  transition: all 0.2s;
+  width: 196px;
+}
+.header__btn:hover {
+  background: #A78BFA;
+}
+.header__btn:active {
+  background: #6D28D9;
+}
+.header__btn:disabled {
+  background: #DDD6FE;
+}
+.header__tablet {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+.header__btn-burger {
+  display: none;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header__btn-burger-icon {
+  width: 24px;
+  height: 24px;
+  fill: #8B5CF6;
+}
+.header__btn-close {
+  width: 24px;
+  height: 24px;
+}
+
+.none {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+.nav__link {
+  font-size: 16px;
+  color: #111827;
+  line-height: 24px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+.nav__link:hover {
+  color: #8B5CF6;
+}
+
+.active {
+  display: flex !important;
+}
+
+@media (max-width: 1600px) {
+  .center {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .header__phone {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .header__phone-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1365px) {
+  .center {
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+  .header__wrap {
+    display: none;
+  }
+  .header__container, .header__wrapper {
+    border-bottom: 2px solid #8B5CF6;
+    padding-bottom: 19px;
+  }
+  .header__text {
+    max-width: 233px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .header__phone {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .header__phone-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 960px) {
+  .center {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+@media (max-width: 830px) {
+  .header__tablet,
+  .header__wrapper,
+  .header__phone-text {
+    display: none;
+  }
+  .header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .header__inner {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .header__btn-burger {
+    display: block;
+  }
+  .header__btn-icon {
+    width: 24px;
+    height: 24px;
+    fill: #a78bfa;
+  }
+  .header__container, .header__wrapper {
+    border: none;
+  }
+  .header__phone {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .header__tablet.active {
+    border-radius: 0px 0px 16px 16px;
+    background: rgb(249, 250, 251);
+  }
+}
+@media (max-width: 700px) {
+  .header__container, .header__wrapper,
+  .header__inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header__tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 510px) {
+  .header__wrapper.active > .header__nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 425px) {
+  .center {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .header__container img, .header__wrapper img {
+    width: 250px;
+  }
+}/*# sourceMappingURL=style.css.map */
