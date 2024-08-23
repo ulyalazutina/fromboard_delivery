@@ -67,10 +67,30 @@ button {
 
     &__tablet {
         display: none;
+        justify-content: center;
+        gap: 8px;
+        align-items: center;
     }
-    &__btn {
+    &__btn-burger {
         display: none;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &-icon {
+            width: 24px;
+            height: 24px;
+            fill: $colorMain;
+        }
     }
+    &__btn-close {
+        width: 24px;
+        height: 24px;
+    }
+}
+.none {
+    display: none;
 }
 
 .nav {
@@ -80,6 +100,10 @@ button {
         @include font(16px, 24px, 700);
         @include linkHover;
     }
+}
+
+.active {
+    display: flex !important;
 }
 
 @media (max-width: 1600px) {
@@ -108,12 +132,6 @@ button {
     .header__container {
         border-bottom: 2px solid $colorMain;
         padding-bottom: 19px;
-    }
-    .header__tablet {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        align-items: center;
     }
     .header__text {
         max-width: 233px;
@@ -152,17 +170,13 @@ button {
             gap: 15px;
             align-items: center;
         }
-        &__btn {
-            display: contents;
+        &__btn-burger {
+            display: block;
+        }
+        &__btn-icon {
             width: 24px;
             height: 24px;
-            background-color: transparent;
-            cursor: pointer;
-            &-icon {
-                width: 24px;
-                height: 24px;
-                fill: #a78bfa;
-            }
+            fill: #a78bfa;
         }
         &__container {
             border: none;
@@ -170,6 +184,10 @@ button {
         &__phone {
             font-size: 20px;
             line-height: 28px;
+        }
+        &__tablet.active {
+            border-radius: 0px 0px 16px 16px;
+            background: rgb(249, 250, 251);
         }
     }
 }
@@ -179,6 +197,17 @@ button {
     .header__inner {
         flex-direction: column;
         gap: 20px;
+    }
+    .header__tablet {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 510px) {
+    .header__wrapper.active > .header__nav{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
