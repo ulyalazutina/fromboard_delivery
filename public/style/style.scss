@@ -254,7 +254,7 @@ button {
     &__item {
         display: grid;
         gap: 4px;
-        transition: transform .2s;
+        transition: transform 0.2s;
         & > a {
             height: 375px;
         }
@@ -262,7 +262,7 @@ button {
             height: 375px;
         }
         &:hover {
-            transform: scale(1.2)
+            transform: scale(1.2);
         }
     }
 
@@ -275,22 +275,62 @@ button {
         border-radius: 12px;
         background: $colorMain;
         padding: 16px 28px;
-        @include font(16px, 24px, 900, #F9FAFB);
+        @include font(16px, 24px, 900, #f9fafb);
         width: fit-content;
         border: none;
         outline: none;
         margin: 36px auto 0;
-        transition: all .2s;
+        transition: all 0.2s;
         &:hover {
-            background: #A78BFA;
+            background: #a78bfa;
         }
         &:active {
-            background: #6D28D9;
+            background: #6d28d9;
         }
         &:disabled {
-            background: #DDD6FE;
+            background: #ddd6fe;
         }
     }
+}
+
+.reviews {
+    padding-top: 72px;
+
+    &__text {
+        @include font(24px, 32px, 700);
+    }
+    &__author {
+        @include font(24px, 32px, 300, #6b7280);
+    }
+    &__item {
+        padding: 32px 43px;
+        background-color: $colorBtn;
+        border-radius: 16px;
+        // margin-right: 24px;
+        width: 626px !important;
+        display: grid !important;
+        align-content: space-between;
+        height: 318px;
+        padding: 16px;
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../img/quotes.svg");
+            width: 62px;
+            height: 43px;
+            position: absolute;
+            bottom: 10%;
+            right: 8%;
+        }
+    }
+    &__slider {
+        padding-left: 130px;
+        padding-right: 130px;
+        height: 318px !important;
+    }
+}
+.reviews > .heading {
+    margin-bottom: 32px;
 }
 
 @-webkit-keyframes slide-in-top {
@@ -365,6 +405,29 @@ button {
         padding-top: 48px;
         justify-content: center;
     }
+    .reviews {
+        padding-top: 48px;
+    }
+    .reviews__text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .reviews__author {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .reviews__slider {
+        height: 276px !important;
+        padding-left: 105px;
+        padding-right: 105px;
+    }
+    .slick-list,.slick-track {
+        height: 276px;
+    }
+    .reviews__item {
+        height: 276px;
+
+    }
 }
 
 @media (max-width: 1365px) {
@@ -417,6 +480,9 @@ button {
         min-width: 90px;
         max-width: 90px;
     }
+    .reviews__item {
+        width: max-content !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -436,7 +502,7 @@ button {
         padding-right: 60px;
         padding-left: 60px;
     }
-    .guarantees__items{
+    .guarantees__items {
         grid-template-columns: 366px;
         justify-content: center;
     }
@@ -485,6 +551,18 @@ button {
             padding-top: 12px;
         }
     }
+    .reviews__slider {
+        height: 350px !important;
+        padding-left: 99px;
+        padding-right: 99px;
+    }
+    .slick-list,.slick-track {
+        height: 350px;
+    }
+    .reviews__item {
+        height: 350px;
+
+    }
 }
 
 @media (max-width: 700px) {
@@ -509,6 +587,16 @@ button {
     }
     .calculator__input-box {
         width: 100%;
+    }
+    .reviews__slider {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .slick-next,.slick-prev {
+        display: none !important;
+    }
+    .slick-track {
+        gap: 0;
     }
 }
 
@@ -541,6 +629,9 @@ button {
     .advantages__text {
         text-align: center;
     }
+    .reviews__text {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -561,12 +652,16 @@ button {
         max-width: 250px;
     }
 
-    .guarantees__item > a   {
+    .guarantees__item > a {
         max-width: 250px;
         height: 250px;
     }
     .guarantees__item > a > img {
         width: 250px;
         height: 250px;
+    }
+    .reviews__item::before {
+        bottom: 4%;
+        right: 12%;
     }
 }
