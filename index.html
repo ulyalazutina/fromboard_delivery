@@ -38,20 +38,57 @@
             </div>
         </div>
         <div class="header__wrapper">
-            <nav class="nav header__nav">
-                <a class="nav__link header__nav-link" href="#">Калькулятор</a>
-                <a class="nav__link header__nav-link" href="#">О нас</a>
-                <a class="nav__link header__nav-link" href="#">Гарантии</a>
-                <a class="nav__link header__nav-link" href="#">Отзывы</a>
-            </nav>
-            <button class="header__btn" type="button">Оставить заявку</button>
-        </div>
-        <div class="header__tablet">
-            <p class="header__text">Доставляем товары из заграницы в Россию</p>
-            <p class="header__text">Стоимость от 550 рублей за заказ</p>
-            <p class="header__text">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+            <div class="header__block">
+                <nav class="nav header__nav">
+                    <a class="nav__link header__nav-link" href="#">Калькулятор</a>
+                    <a class="nav__link header__nav-link" href="#">О нас</a>
+                    <a class="nav__link header__nav-link" href="#">Гарантии</a>
+                    <a class="nav__link header__nav-link" href="#">Отзывы</a>
+                </nav>
+                <button class="header__btn" type="button">Оставить заявку</button>
+            </div>
+            <div class="header__tablet">
+                <p class="header__text">Доставляем товары из заграницы в Россию</p>
+                <p class="header__text">Стоимость от 550 рублей за заказ</p>
+                <p class="header__text">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+            </div>
         </div>
     </header>
+    <main class="main center">
+        <section class="calculator">
+            <div class="calculator__container">
+                <div class="calculator__inner">
+                    <h1 class="title">Без&nbsp;проблемная доставка купленных вещей из&nbsp;США, Европы и&nbsp;Азии в&nbsp;Россию</h1>
+                    <p class="calculator__text">Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
+                </div>
+                <img class="calculator__img" src="./public/img/main.jpg" alt="Фотография на странице калькулятора">
+            </div>
+            <div class="calculator__wrapper">
+                <h2 class="calculator__heading">Калькулятор доставки</h2>
+                <p class="calculator__subtitle">Посчитайте, сколько будет стоить перевозка покупки из зарубежа</p>
+                <div class="calculator__input-box">
+                    <input class="calculator__input" type="text" name="" id="" placeholder="Имя">
+                    <div class="calculator__input-inner">
+                        <input class="calculator__input"  type="email" placeholder="Почта" name="" id="">
+                        <input  class="calculator__input" type="number" placeholder="Телефон" name="" id="">
+                    </div>
+                    <div class="calculator__input-inner">
+                        <input class="calculator__input" type="number" placeholder="Общая площадь, м²" name="" id="">
+                        <input class="calculator__input" type="number" placeholder="Вес, кг" name="" id="">
+                    </div>
+                    <div class="calculator__input-inner">
+                        <input class="calculator__input" type="text" placeholder="Страна покупки" name="" id="">
+                        <input class="calculator__input" type="text" placeholder="Город покупки" name="" id="">
+                    </div>
+                    <div class="calculator__input-inner">
+                        <input class="calculator__input" type="text" placeholder="Область доставки" name="" id="">
+                        <input class="calculator__input" type="text" placeholder="Город доставки" name="" id="">
+                    </div>
+                    <button class="calculator__btn">Заказать расчёт</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="./public/script/burger.js"></script>
 </body>
 
