@@ -197,6 +197,42 @@ transition: all .2s;
     }
 }
 
+.advantages {
+    padding-top: 72px;
+    display: grid;
+    gap: 24px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(496px,1fr));
+        gap: 24px;
+    }
+    &__item {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        padding: 24px;
+    }
+    &__icon {
+        min-width: 113px;
+        max-width: 113px;
+    }
+    &__inner {
+        display: grid;
+        gap: 12px;
+    }
+    &__title {
+        @include font(24px, 32px, 900);
+    }
+    &__text {
+        @include font(14px, 20px, 400);
+    }
+}
+
+.heading {
+    @include font(30px, 36px, 900);
+    text-align: center;
+}
+
 
 @-webkit-keyframes slide-in-top {
     0% {
@@ -263,6 +299,9 @@ transition: all .2s;
         font-size: 30px;
         line-height: 36px;
     }
+    .advantages {
+        padding-top: 48px;
+    }
 }
 
 @media (max-width: 1365px) {
@@ -298,6 +337,22 @@ transition: all .2s;
             font-size: 16px;
             line-height: 24px;
         }
+    }
+    .advantages__items {
+        grid-template-columns: repeat(auto-fit, minmax(372px,1fr));
+        row-gap: 34px;
+        column-gap: 24px;
+    }
+    .advantages__item {
+        padding: 0;
+    }
+    .advantages__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .advantages__icon {
+        min-width: 90px;
+        max-width: 90px;
     }
 }
 
@@ -401,6 +456,24 @@ transition: all .2s;
         flex-direction: column;
         align-items: center;
     }
+    .advantages__items {
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    }
+    .advantages__item {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .advantages__icon {
+        min-width: 70px;
+        max-width: 70px;
+        height: 50px;
+    }
+    .advantages__title{
+        text-align: center;
+    }
+    .advantages__text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 425px) {
@@ -411,4 +484,5 @@ transition: all .2s;
     .header__container img {
         width: 250px;
     }
+
 }
