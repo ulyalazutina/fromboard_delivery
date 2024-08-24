@@ -217,11 +217,11 @@ button {
   transition: all 0.2s;
 }
 .calculator__input::-moz-placeholder {
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: inherit;
 }
 .calculator__input::placeholder {
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: inherit;
 }
 .calculator__input:hover {
@@ -305,6 +305,72 @@ button {
   font-weight: 900;
   text-align: center;
 }
+
+.guarantees {
+  padding-top: 72px;
+  display: grid;
+  gap: 12px;
+}
+.guarantees__text {
+  font-size: 16px;
+  color: #111827;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 756px;
+  margin: 12px auto 24px;
+}
+.guarantees__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(366px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.guarantees__item {
+  display: grid;
+  gap: 4px;
+  transition: transform 0.2s;
+}
+.guarantees__item > a {
+  height: 375px;
+}
+.guarantees__item > img {
+  height: 375px;
+}
+.guarantees__item:hover {
+  transform: scale(1.2);
+}
+.guarantees__subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #111827;
+  line-height: 28px;
+  font-weight: 900;
+}
+.guarantees__btn {
+  border-radius: 12px;
+  background: #8B5CF6;
+  padding: 16px 28px;
+  font-size: 16px;
+  color: #F9FAFB;
+  line-height: 24px;
+  font-weight: 900;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  outline: none;
+  margin: 36px auto 0;
+  transition: all 0.2s;
+}
+.guarantees__btn:hover {
+  background: #A78BFA;
+}
+.guarantees__btn:active {
+  background: #6D28D9;
+}
+.guarantees__btn:disabled {
+  background: #DDD6FE;
+}
 @keyframes slide-in-top {
   0% {
     transform: translateY(-1000px);
@@ -357,6 +423,10 @@ button {
   }
   .advantages {
     padding-top: 48px;
+  }
+  .guarantees {
+    padding-top: 48px;
+    justify-content: center;
   }
 }
 @media (max-width: 1365px) {
@@ -426,6 +496,10 @@ button {
   .center {
     padding-right: 60px;
     padding-left: 60px;
+  }
+  .guarantees__items {
+    grid-template-columns: 366px;
+    justify-content: center;
   }
 }
 @media (max-width: 830px) {
@@ -531,5 +605,20 @@ button {
   }
   .header__container img {
     width: 250px;
+  }
+  .guarantees__items {
+    grid-template-columns: 280px;
+    justify-items: center;
+  }
+  .guarantees__subtitle {
+    max-width: 250px;
+  }
+  .guarantees__item > a {
+    max-width: 250px;
+    height: 250px;
+  }
+  .guarantees__item > a > img {
+    width: 250px;
+    height: 250px;
   }
 }/*# sourceMappingURL=style.css.map */
