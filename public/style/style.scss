@@ -306,8 +306,6 @@ button {
         padding: 32px 43px;
         background-color: $colorBtn;
         border-radius: 16px;
-        // margin-right: 24px;
-        width: 626px !important;
         display: grid !important;
         align-content: space-between;
         height: 318px;
@@ -331,6 +329,54 @@ button {
 }
 .reviews > .heading {
     margin-bottom: 32px;
+}
+
+.form {
+    margin-top: 72px;
+    padding: 64px;
+    background-color: $colorBtn;
+    display: grid;
+    gap: 32px;
+    justify-content: center;
+    border-radius: 16px;
+    &__wrap {
+        display: grid;
+        gap: 24px;
+        width: 497px;
+    }
+    &__inner {
+        display: flex;
+        gap: 24px;
+    }
+    &__input {
+        border: 2px solid rgb(17, 24, 39);
+        border-radius: 4px;
+        padding: 12px;
+        width: 100%;
+        @include font(16px, 24px, 400, #111827);
+        &::placeholder {
+            color: #9ca3af;
+        }
+        &--textarea {
+            height: 150px;
+        }
+        &:hover {
+            border: 2px solid $colorMain;
+            color: $colorMain;
+        }
+        &:active {
+            color: $colorMain;
+        }
+        &:focus {
+            color: $colorMain;
+        }
+        &:invalid {
+            border-color: red;
+        }
+    }
+    &__btn {
+        @include btn;
+    }
 }
 
 @-webkit-keyframes slide-in-top {
@@ -421,12 +467,15 @@ button {
         padding-left: 105px;
         padding-right: 105px;
     }
-    .slick-list,.slick-track {
+    .slick-list,
+    .slick-track {
         height: 276px;
     }
     .reviews__item {
         height: 276px;
-
+    }
+    .form {
+        margin-top: 48px;
     }
 }
 
@@ -479,9 +528,6 @@ button {
     .advantages__icon {
         min-width: 90px;
         max-width: 90px;
-    }
-    .reviews__item {
-        width: max-content !important;
     }
 }
 
@@ -556,12 +602,12 @@ button {
         padding-left: 99px;
         padding-right: 99px;
     }
-    .slick-list,.slick-track {
+    .slick-list,
+    .slick-track {
         height: 350px;
     }
     .reviews__item {
         height: 350px;
-
     }
 }
 
@@ -592,17 +638,30 @@ button {
         padding-right: 0;
         padding-left: 0;
     }
-    .slick-next,.slick-prev {
+    .slick-next,
+    .slick-prev {
         display: none !important;
     }
     .slick-track {
         gap: 0;
+    }
+    .form__inner {
+        display: grid;
+    }
+    .form__wrap {
+        width: 400px;
     }
 }
 
 @media (max-width: 570px) {
     .calculator__input-inner {
         flex-direction: column;
+    }
+    .form__wrap {
+        width: 310px;
+    }
+    .form {
+        padding: 32px;
     }
 }
 
@@ -631,6 +690,12 @@ button {
     }
     .reviews__text {
         font-size: 16px;
+    }
+    .form {
+        justify-items: center;
+    }
+    .form__wrap {
+        width: 280px;
     }
 }
 
@@ -663,5 +728,17 @@ button {
     .reviews__item::before {
         bottom: 4%;
         right: 12%;
+    }
+}
+
+@media (max-width: 385px) {
+    .form__wrap {
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .form__wrap {
+        width: 230px;
     }
 }

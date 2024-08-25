@@ -5,12 +5,12 @@ $('.single-item').slick({
     swipeToSlide: true,
     responsive: [
         {
-          breakpoint: 1365,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-          }
+            breakpoint: 1365,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+            }
         },
     ]
 }); 
