@@ -502,6 +502,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.footer__logo-box {
+  justify-items: start;
+}
 .footer__wrapper {
   position: relative;
 }
@@ -510,12 +513,27 @@ button {
   color: #F9FAFB;
   line-height: 16px;
   font-weight: 400;
+  position: relative;
+}
+.footer__copy::after {
+  content: "";
+  background-image: url("../img/smile.svg");
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: -8%;
+  top: 0;
 }
 .footer__link {
   font-size: 16px;
   color: #F9FAFB;
   line-height: 24px;
   font-weight: 700;
+  transition: color 0.2s;
+}
+.footer__link:hover {
+  color: #8B5CF6;
 }
 .footer__phone {
   font-size: 36px;
