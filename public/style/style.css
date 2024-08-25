@@ -143,6 +143,7 @@ button {
 
 .main {
   background-color: #E5E7EB;
+  padding-bottom: 72px;
 }
 
 .title {
@@ -488,6 +489,66 @@ button {
 .form__btn:disabled {
   background: #DDD6FE;
 }
+
+.footer {
+  background-color: rgb(17, 24, 39);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  gap: 24px;
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__wrapper {
+  position: relative;
+}
+.footer__copy {
+  font-size: 12px;
+  color: #F9FAFB;
+  line-height: 16px;
+  font-weight: 400;
+}
+.footer__link {
+  font-size: 16px;
+  color: #F9FAFB;
+  line-height: 24px;
+  font-weight: 700;
+}
+.footer__phone {
+  font-size: 36px;
+  color: #F9FAFB;
+  line-height: 40px;
+  font-weight: 900;
+}
+.footer__subtitle {
+  font-size: 24px;
+  color: #F9FAFB;
+  line-height: 32px;
+  font-weight: 400;
+}
+.footer__text, .footer__name {
+  font-size: 12px;
+  color: #4B5563;
+  line-height: 16px;
+  font-weight: 300;
+}
+.footer__name {
+  font-weight: 400;
+}
+.footer__nav {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  top: 36%;
+  left: 35%;
+}
+.footer__container {
+  display: flex;
+  gap: 148px;
+}
 @keyframes slide-in-top {
   0% {
     transform: translateY(-1000px);
@@ -499,6 +560,9 @@ button {
   }
 }
 @media (max-width: 1600px) {
+  .main {
+    padding-bottom: 48px;
+  }
   .center {
     padding-right: 150px;
     padding-left: 150px;
@@ -571,6 +635,31 @@ button {
   .form {
     margin-top: 48px;
   }
+  .footer__container {
+    gap: 0;
+  }
+  .footer__phone {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .footer__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1520px) {
+  .footer__nav {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .footer__wrapper {
+    display: grid;
+    gap: 24px;
+  }
+  .footer__nav {
+    justify-content: center;
+  }
 }
 @media (max-width: 1365px) {
   .center {
@@ -633,6 +722,14 @@ button {
   }
   .calculator__img {
     width: 100%;
+  }
+  .footer__container {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .footer__text, .footer__name {
+    text-align: center;
   }
 }
 @media (max-width: 960px) {
@@ -698,6 +795,18 @@ button {
   }
   .reviews__item {
     height: 350px;
+  }
+  .footer__wrap {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  .footer__nav {
+    margin-bottom: 24px;
+  }
+  .footer__logo-box, .footer__phone-box {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
   }
 }
 @media (max-width: 700px) {
@@ -784,6 +893,10 @@ button {
   .form__wrap {
     width: 280px;
   }
+  .footer__nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (max-width: 425px) {
   .center {
@@ -811,6 +924,15 @@ button {
   .reviews__item::before {
     bottom: 4%;
     right: 12%;
+  }
+  .footer__phone {
+    font-size: 25px;
+  }
+  .footer__subtitle {
+    font-size: 15px;
+  }
+  .footer__logo-box > a > img {
+    width: 250px;
   }
 }
 @media (max-width: 385px) {
