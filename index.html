@@ -72,22 +72,22 @@
                 <h2 class="calculator__heading">Калькулятор доставки</h2>
                 <p class="calculator__subtitle">Посчитайте, сколько будет стоить перевозка покупки из зарубежа</p>
                 <div class="calculator__input-box">
-                    <input class="calculator__input" type="text" name="" id="" placeholder="Имя">
+                    <input class="calculator__input" type="text" name="name" id="name" placeholder="Имя">
                     <div class="calculator__input-inner">
-                        <input class="calculator__input" type="email" placeholder="Почта" name="" id="">
-                        <input class="calculator__input" type="number" placeholder="Телефон" name="" id="">
+                        <input class="calculator__input" type="email" placeholder="Почта" name="email" id="email">
+                        <input class="calculator__input" type="number" placeholder="Телефон" name="phone" id="phone">
                     </div>
                     <div class="calculator__input-inner">
-                        <input class="calculator__input" type="number" placeholder="Общая площадь, м²" name="" id="">
-                        <input class="calculator__input" type="number" placeholder="Вес, кг" name="" id="">
+                        <input class="calculator__input" type="number" placeholder="Общая площадь, м²" name="square" id="square">
+                        <input class="calculator__input" type="number" placeholder="Вес, кг" name="weight" id="weight">
                     </div>
                     <div class="calculator__input-inner">
-                        <input class="calculator__input" type="text" placeholder="Страна покупки" name="" id="">
-                        <input class="calculator__input" type="text" placeholder="Город покупки" name="" id="">
+                        <input class="calculator__input" type="text" placeholder="Страна покупки" name="country" id="country">
+                        <input class="calculator__input" type="text" placeholder="Город покупки" name="cityBuy" id="cityBuy">
                     </div>
                     <div class="calculator__input-inner">
-                        <input class="calculator__input" type="text" placeholder="Область доставки" name="" id="">
-                        <input class="calculator__input" type="text" placeholder="Город доставки" name="" id="">
+                        <input class="calculator__input" type="text" placeholder="Область доставки" name="area" id="area">
+                        <input class="calculator__input" type="text" placeholder="Город доставки" name="city" id="city">
                     </div>
                     <button class="calculator__btn">Заказать расчёт</button>
                 </div>
@@ -237,14 +237,14 @@
             <h2 class="heading">Остались вопросы?</h2>
             <div class="form__wrap">
                 <div class="form__inner">
-                    <input class="form__input" type="text" placeholder="Имя">
-                    <input class="form__input" type="email" placeholder="Почта">
+                    <input class="form__input" type="text" placeholder="Имя" name="questionName" id="questionName">
+                    <input class="form__input" type="email" placeholder="Почта" name="questionEmail" id="questionEmail">
                 </div>
                 <div class="form__inner">
-                    <input class="form__input" type="number" placeholder="Телефон" name="" id="">
-                    <input class="form__input" type="text" placeholder="Тема вопроса" name="" id="">
+                    <input class="form__input" type="number" placeholder="Телефон" name="questionPhone" id="questionPhone">
+                    <input class="form__input" type="text" placeholder="Тема вопроса" name="questionTheme" id="questionTheme">
                 </div>
-                <textarea class="form__input form__input--textarea" placeholder="Сообщение..." name="" id=""></textarea>
+                <textarea class="form__input form__input--textarea" placeholder="Сообщение..." name="questionMsq" id="questionMsq"></textarea>
                 <button class="form__btn" type="button">Оставить заявку</button>
             </div>
         </section>
