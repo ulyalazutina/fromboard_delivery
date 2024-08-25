@@ -306,8 +306,6 @@ button {
         padding: 32px 43px;
         background-color: $colorBtn;
         border-radius: 16px;
-        // margin-right: 24px;
-        width: 626px !important;
         display: grid !important;
         align-content: space-between;
         height: 318px;
@@ -357,7 +355,7 @@ button {
         width: 100%;
         @include font(16px, 24px, 400, #111827);
         &::placeholder {
-            color: #9CA3AF;
+            color: #9ca3af;
         }
         &--textarea {
             height: 150px;
@@ -469,7 +467,8 @@ button {
         padding-left: 105px;
         padding-right: 105px;
     }
-    .slick-list,.slick-track {
+    .slick-list,
+    .slick-track {
         height: 276px;
     }
     .reviews__item {
@@ -529,9 +528,6 @@ button {
     .advantages__icon {
         min-width: 90px;
         max-width: 90px;
-    }
-    .reviews__item {
-        width: max-content !important;
     }
 }
 
@@ -606,12 +602,12 @@ button {
         padding-left: 99px;
         padding-right: 99px;
     }
-    .slick-list,.slick-track {
+    .slick-list,
+    .slick-track {
         height: 350px;
     }
     .reviews__item {
         height: 350px;
-
     }
 }
 
@@ -642,7 +638,8 @@ button {
         padding-right: 0;
         padding-left: 0;
     }
-    .slick-next,.slick-prev {
+    .slick-next,
+    .slick-prev {
         display: none !important;
     }
     .slick-track {
