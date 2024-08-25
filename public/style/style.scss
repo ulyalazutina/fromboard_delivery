@@ -333,6 +333,54 @@ button {
     margin-bottom: 32px;
 }
 
+.form {
+    margin-top: 72px;
+    padding: 64px;
+    background-color: $colorBtn;
+    display: grid;
+    gap: 32px;
+    justify-content: center;
+    border-radius: 16px;
+    &__wrap {
+        display: grid;
+        gap: 24px;
+        width: 497px;
+    }
+    &__inner {
+        display: flex;
+        gap: 24px;
+    }
+    &__input {
+        border: 2px solid rgb(17, 24, 39);
+        border-radius: 4px;
+        padding: 12px;
+        width: 100%;
+        @include font(16px, 24px, 400, #111827);
+        &::placeholder {
+            color: #9CA3AF;
+        }
+        &--textarea {
+            height: 150px;
+        }
+        &:hover {
+            border: 2px solid $colorMain;
+            color: $colorMain;
+        }
+        &:active {
+            color: $colorMain;
+        }
+        &:focus {
+            color: $colorMain;
+        }
+        &:invalid {
+            border-color: red;
+        }
+    }
+    &__btn {
+        @include btn;
+    }
+}
+
 @-webkit-keyframes slide-in-top {
     0% {
         -webkit-transform: translateY(-1000px);
@@ -426,7 +474,9 @@ button {
     }
     .reviews__item {
         height: 276px;
-
+    }
+    .form {
+        margin-top: 48px;
     }
 }
 
@@ -598,11 +648,23 @@ button {
     .slick-track {
         gap: 0;
     }
+    .form__inner {
+        display: grid;
+    }
+    .form__wrap {
+        width: 400px;
+    }
 }
 
 @media (max-width: 570px) {
     .calculator__input-inner {
         flex-direction: column;
+    }
+    .form__wrap {
+        width: 310px;
+    }
+    .form {
+        padding: 32px;
     }
 }
 
@@ -631,6 +693,12 @@ button {
     }
     .reviews__text {
         font-size: 16px;
+    }
+    .form {
+        justify-items: center;
+    }
+    .form__wrap {
+        width: 280px;
     }
 }
 
@@ -663,5 +731,17 @@ button {
     .reviews__item::before {
         bottom: 4%;
         right: 12%;
+    }
+}
+
+@media (max-width: 385px) {
+    .form__wrap {
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .form__wrap {
+        width: 230px;
     }
 }
